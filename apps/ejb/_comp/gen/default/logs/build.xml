@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    development component
+                     name: apps/ejb
+                   vendor: atos.com
+                     type: J2EE
+                 sub-type: EJBModule
+              type-vendor: sap.com
+
+       software component
+                     name: MEEXT
+                   vendor: atos.com
+
+                 location: MEEXTDC
+          source location: Administrator@WinSrv2k8R2
+            build variant: default
+
+    building on WinSrv2k8R2, Windows Server 2008 R2/x86, version 6.1
+    using Java VM 'Java HotSpot(TM) Client VM', version 20.8-b03 (Sun Microsystems Inc.)
+    build started at 2015-04-16 08:26:25 GMT-04:00 (EDT)
+
+    Build Plugin 'EJBModulePlugin', Version 7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:33:27 +0200, CL247900)
+    detailed versions:
+    sap.com:tc/bi/anttasks#def     7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:49 +0200, CL247900)
+    sap.com:tc/bi/bp/ejbmodule#ejb 7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:33:27 +0200, CL247900)
+    sap.com:tc/bi/core#def         7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:34:57 +0200, CL247900)
+    sap.com:tc/bi/exception#def    7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:46 +0200, CL247900)
+    sap.com:tc/bi/extddicdb#def    7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:55 +0200, CL247900)
+    sap.com:tc/bi/extsql#def       7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:50 +0200, CL247900)
+    sap.com:tc/bi/framework#def    7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:32:31 +0200, CL247900)
+    sap.com:tc/bi/i18n#def         7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:43 +0200, CL247900)
+    sap.com:tc/bi/javatech#def     7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:32:53 +0200, CL247900)
+    sap.com:tc/bi/jdoc#def         7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:47 +0200, CL247900)
+    sap.com:tc/bi/jdoc/util#def    7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:32:45 +0200, CL247900)
+    sap.com:tc/bi/jlincbs#def      7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:32:09 +0200, CL247900)
+    sap.com:tc/bi/settings#version 7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:33:44 +0200, CL247900)
+    sap.com:tc/bi/util#util        7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:32:42 +0200, CL247900)
+    sap.com:tc/bi/velocity#def     7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:42 +0200, CL247900)
+    sap.com:tc/bi/xml#def          7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:44 +0200, CL247900)
+ -->
+<project name="DC Build"
+         default="build"
+         basedir=".">
+<taskdef name="checkfileset" classname="com.sap.tools.ant.taskdefs.EmptyFilesetCheck"/>
+<taskdef name="jlinppcheck" classname="com.sap.tc.buildplugin.pp.ant.JLinEECheckTask"/>
+<taskdef name="pppacker" classname="com.sap.tc.buildplugin.pp.PPPackTask"/>
+<taskdef name="propertybag" classname="com.sap.tools.ant.taskdefs.PropertyBag"/>
+<taskdef name="timer" classname="com.sap.tools.ant.taskdefs.Timer"/>
+<taskdef name="xlf2prop" classname="com.sap.tc.buildplugin.util.XlfConverter"/>
+
+<target name="compile">
+<mkdir dir="C:\workspace.jdi\0\t\01F5436F05BBCB6DE1ED50A8710B9317\classes"/>
+<!-- begin generator extension type 'sap.com~sqlj' for generator id 'sap.com~javac' -->
+<!-- No *.sqlj files found, skipping SQLJ preprocessing. -->
+<!-- end generator extension type 'sap.com~sqlj' for generator id 'sap.com~javac' -->
+<!-- begin generator id 'sap.com~javac', type 'sap.com~javac' -->
+<echo message="Starting Java compiler using the current JVM"/>
+<timer/>
+<echo message="Settings:"/>
+<echo message="        debug: on"/>
+<echo message="     optimize: off"/>
+<echo message="  deprecation: default"/>
+<echo message="      verbose: default"/>
+<echo message="     encoding: UTF-8"/>
+<echo message="       source: 1.6"/>
+<echo message="       target: 1.6"/>
+<echo message="  source path: C:\workspace.jdi\0\DCs\atos.com\apps\ejb\_comp\ejbModule"/>
+<echo message="   class path:"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\legacy\_comp\gen\default\public\api\lib\java\me.legacy.sdk-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\atos.com\apps\library\_comp\gen\default\public\api\lib\java\common-lang3.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\atos.com\apps\library\_comp\gen\default\public\api\lib\java\joda-time-2.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\atos.com\apps\library\_comp\gen\default\public\api\lib\java\jt400.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\atos.com\apps\library\_comp\gen\default\public\api\lib\java\jxl-2.6.3.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\atos.com\apps\library\_comp\gen\default\public\api\lib\java\me.status.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\com.sap.tc.ls.renderkit_api-3.0.95.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\com.sap.ui.faces.extended.renderkit_api-3.0.95.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.messaging.client-api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.nonconformance.client-api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.plant.client-api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.productdefinition.client-api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.production.client-api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.production.podclient-api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.reporting.client-api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.sampling.client-api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.schedulingstandards.client-api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.security.client-api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\com.sap.ui.faces.renderkit_api-3.0.95.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.tooling.client-api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.wpmf.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\jsf-api-1.2_04.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.common.client-api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.datacollection.client-api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.datatype.client-api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.integration.client-api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.inventory.client-api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.labor.client-api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\engine.jee5.facade\_comp\gen\default\public\api\lib\java\engine.jee5.facade.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\engine.jee5.facade\_comp\gen\default\public\api\lib\java\jee5.facade.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\common.globalization.api-1.6.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.activity.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.datacollection.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.dataformat.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.datatransfer.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.datatype.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.dbsequence.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.demand.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.diagnostics.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.document.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.extension.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.framework.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.appconfig.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.integration.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.integration.cncdnc.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.integration.erp.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.inventory.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.labor.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.messaging.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.nonconformance.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.numbering.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.plant.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.productdefinition.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.backgroundprocess.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.production.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.productiondate.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.reasoncode.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.reporting.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.reporting.cvom.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.sampling.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.schedulingstandards.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.script.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.security.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.setpoint.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.browse.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.tooling.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.user.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\service-core.api-1.6.1.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.certification.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.collaboration.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.common.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.container.api-150.3.0.jar"/>
+<echo message="      C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.customdata.api-150.3.0.jar"/>
+<echo message="   output dir: C:\workspace.jdi\0\t\01F5436F05BBCB6DE1ED50A8710B9317\classes"/>
+<checkfileset fail="false">
+<fileset dir="C:\workspace.jdi\0\DCs\atos.com\apps\ejb\_comp\ejbModule">
+<include name="**/*.class"/>
+</fileset>
+</checkfileset>
+<javac includeAntRuntime="no"
+       destdir="C:\workspace.jdi\0\t\01F5436F05BBCB6DE1ED50A8710B9317\classes"
+       encoding="UTF-8"
+       deprecation="false"
+       debug="on"
+       target="1.6"
+       source="1.6"
+       tempdir="C:\workspace.jdi\0\t\01F5436F05BBCB6DE1ED50A8710B9317">
+<src path="C:\workspace.jdi\0\DCs\atos.com\apps\ejb\_comp\ejbModule"/>
+<include name="**/*.java"/>
+<classpath>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\legacy\_comp\gen\default\public\api\lib\java\me.legacy.sdk-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\atos.com\apps\library\_comp\gen\default\public\api\lib\java\common-lang3.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\atos.com\apps\library\_comp\gen\default\public\api\lib\java\joda-time-2.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\atos.com\apps\library\_comp\gen\default\public\api\lib\java\jt400.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\atos.com\apps\library\_comp\gen\default\public\api\lib\java\jxl-2.6.3.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\atos.com\apps\library\_comp\gen\default\public\api\lib\java\me.status.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\com.sap.tc.ls.renderkit_api-3.0.95.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\com.sap.ui.faces.extended.renderkit_api-3.0.95.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.messaging.client-api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.nonconformance.client-api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.plant.client-api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.productdefinition.client-api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.production.client-api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.production.podclient-api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.reporting.client-api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.sampling.client-api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.schedulingstandards.client-api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.security.client-api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\com.sap.ui.faces.renderkit_api-3.0.95.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.tooling.client-api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.wpmf.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\jsf-api-1.2_04.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.common.client-api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.datacollection.client-api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.datatype.client-api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.integration.client-api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.inventory.client-api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\wpmf\libs\_comp\gen\default\public\api\lib\java\me.labor.client-api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\engine.jee5.facade\_comp\gen\default\public\api\lib\java\engine.jee5.facade.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\engine.jee5.facade\_comp\gen\default\public\api\lib\java\jee5.facade.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\common.globalization.api-1.6.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.activity.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.datacollection.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.dataformat.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.datatransfer.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.datatype.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.dbsequence.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.demand.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.diagnostics.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.document.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.extension.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.framework.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.appconfig.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.integration.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.integration.cncdnc.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.integration.erp.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.inventory.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.labor.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.messaging.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.nonconformance.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.numbering.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.plant.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.productdefinition.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.backgroundprocess.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.production.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.productiondate.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.reasoncode.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.reporting.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.reporting.cvom.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.sampling.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.schedulingstandards.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.script.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.security.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.setpoint.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.browse.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.tooling.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.user.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\service-core.api-1.6.1.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.certification.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.collaboration.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.common.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.container.api-150.3.0.jar"/>
+<pathelement location="C:\workspace.jdi\0\DCs\sap.com\me\papi\_comp\gen\default\public\api\lib\java\me.customdata.api-150.3.0.jar"/>
+</classpath>
+</javac>
+<timer message="Java compilation finished in "/>
+<!-- end generator id 'sap.com~javac', type 'sap.com~javac' -->
+<!-- begin generator extension type 'sap.com~jlin' for generator id 'sap.com~javac' -->
+<!-- JLin disabled. -->
+<!-- end generator extension type 'sap.com~jlin' for generator id 'sap.com~javac' -->
+<!-- begin generator extension type 'sap.com~sqlj' for generator id 'sap.com~javac' -->
+<!-- No *.sqlj files found, skipping SQLJ post-processing. -->
+<!-- end generator extension type 'sap.com~sqlj' for generator id 'sap.com~javac' -->
+<!-- begin generator extension type 'sap.com~jdo' for generator id 'sap.com~javac' -->
+<!-- No *.jdo files found, skipping JDO enhancer. -->
+<!-- end generator extension type 'sap.com~jdo' for generator id 'sap.com~javac' -->
+<!-- begin generator extension type 'sap.com~xlf2prop' for generator id 'sap.com~javac' -->
+<echo message="Start XLF conversion"/>
+<timer/>
+<xlf2prop todir="C:\workspace.jdi\0\t\01F5436F05BBCB6DE1ED50A8710B9317\classes">
+<fileset dir="C:\workspace.jdi\0\DCs\atos.com\apps\ejb\_comp\ejbModule"/>
+</xlf2prop>
+<timer message="XLF conversion finished in "/>
+<!-- end generator extension type 'sap.com~xlf2prop' for generator id 'sap.com~javac' -->
+<!-- begin generator extension type 'sap.com~jdoc' for generator id 'sap.com~javac' -->
+<!-- Javadoc generation disabled. -->
+<!-- end generator extension type 'sap.com~jdoc' for generator id 'sap.com~javac' -->
+</target>
+
+<target name="createPublicParts" depends="compile">
+<timer/>
+<pppacker ppname="client">
+</pppacker>
+<timer message="Packing of public part 'client' finished in "/>
+<timer/>
+<pppacker ppname="ejbjar">
+</pppacker>
+<timer message="Packing of public part 'ejbjar' finished in "/>
+<jlinppcheck/>
+</target>
+
+<target name="build" depends="compile,createPublicParts">
+
+</target>
+</project>

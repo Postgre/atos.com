@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<development-component
+		version="1.0.5"
+		xmlns="http://xml.sap.com/2002/11/DevelopmentComponent"
+		xmlns:IDX="urn:sap.com:DevelopmentComponent:1.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://xml.sap.com/2002/11/DevelopmentComponent dcdef.xsd">
+	<name>apps/ejb</name>
+	<vendor>atos.com</vendor>
+	<caption>EJB</caption>
+	<component-type>
+		<vendor>sap.com</vendor>
+		<type>J2EE</type>
+		<sub-type>EJBModule</sub-type>
+	</component-type>
+	<properties>
+		<folder-attributes xmlns="http://xml.sap.com/2002/11/DevelopmentComponent">
+			<folder-attribute attribute="meta-inf" path="ejbModule/META-INF"/>
+		</folder-attributes>
+		<j2ee-attributes xmlns="http://xml.sap.com/2002/11/DevelopmentComponent">
+			<jee-version value="5.0"/>
+		</j2ee-attributes>
+		<localization xmlns="http://xml.sap.com/2003/06/Localization" xmlns:ns0="http://xml.sap.com/2003/06/Localization">
+			<domain>BC</domain>
+			<originalLocale>en</originalLocale>
+		</localization>
+	</properties>
+	<build-plugin>
+		<dc-ref>
+			<name>tc/bi/bp/ejbmodule</name>
+			<vendor>sap.com</vendor>
+		</dc-ref>
+		<pp-ref>ejb</pp-ref>
+	</build-plugin>
+	<dependencies>
+		<dependency>
+			<dc-ref>
+				<name>apps/library</name>
+				<vendor>atos.com</vendor>
+			</dc-ref>
+			<pp-ref>api</pp-ref>
+			<at-build-time/>
+		</dependency>
+		<dependency>
+			<dc-ref>
+				<name>apps/library</name>
+				<vendor>atos.com</vendor>
+			</dc-ref>
+			<pp-ref>archives</pp-ref>
+			<at-build-time/>
+		</dependency>
+		<dependency>
+			<dc-ref>
+				<name>engine.jee5.facade</name>
+				<vendor>sap.com</vendor>
+			</dc-ref>
+			<pp-ref>api</pp-ref>
+			<at-build-time/>
+		</dependency>
+		<dependency>
+			<dc-ref>
+				<name>me/legacy</name>
+				<vendor>sap.com</vendor>
+			</dc-ref>
+			<pp-ref>api</pp-ref>
+			<at-build-time/>
+		</dependency>
+		<dependency>
+			<dc-ref>
+				<name>me/papi</name>
+				<vendor>sap.com</vendor>
+			</dc-ref>
+			<pp-ref>api</pp-ref>
+			<at-build-time/>
+		</dependency>
+		<dependency>
+			<dc-ref>
+				<name>me/wpmf/libs</name>
+				<vendor>sap.com</vendor>
+			</dc-ref>
+			<pp-ref>api</pp-ref>
+			<at-build-time/>
+		</dependency>
+	</dependencies>
+	<folders>
+		<package-folder>.apt_generated</package-folder>
+		<package-folder>ejbModule</package-folder>
+	</folders>
+	<access-control-list>
+		<grant forwarding-allowed="false">
+			<sc-ref>
+				<name>MEEXT</name>
+				<vendor>atos.com</vendor>
+			</sc-ref>
+		</grant>
+	</access-control-list>
+	<attributes>
+		<attribute>
+			<attribute-type>ACHAssignment</attribute-type>
+			<attribute-vendor>sap.com</attribute-vendor>
+			<attribute-value>ATOS-EXT</attribute-value>
+		</attribute>
+	</attributes>
+</development-component>

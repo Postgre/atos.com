@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<common:serviceInvocationRequests xmlns:activity="http://www.sap.com/me/activity" xmlns:common="http://www.sap.com/me/common">
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_OPER_HK_01</common:activity>
+			<common:description>I18N[Z_OPER_HK_01.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>SERVICE</activity:executionType>
+			<activity:classOrProgram>com.atos.hook$CreateOperationHook</activity:classOrProgram>
+			<activity:visible>false</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_POSTORDERHOOK_SEQ</common:activity>
+			<common:description>I18N[Z_POSTORDERHOOK_SEQ.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>SERVICE</activity:executionType>
+			<activity:classOrProgram>com.atos.hook$PostOrderReleaseHook</activity:classOrProgram>
+			<activity:visible>false</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_PRESTARTHOOK_SEQ</common:activity>
+			<common:description>I18N[Z_PRESTARTHOOK_SEQ.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>SERVICE</activity:executionType>
+			<activity:classOrProgram>com.atos.hook$PreStartHookSequence</activity:classOrProgram>
+			<activity:visible>false</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_POSTSTARTHOOK_SEQ</common:activity>
+			<common:description>I18N[Z_POSTSTARTHOOK_SEQ.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>SERVICE</activity:executionType>
+			<activity:classOrProgram>com.atos.hook$PostStartHookSequence</activity:classOrProgram>
+			<activity:visible>false</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+		<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_GENERICPAT_HK_01</common:activity>
+			<common:description>I18N[Z_GENERICPAT_HK_01.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>SERVICE</activity:executionType>
+			<activity:classOrProgram>com.atos.hook$GenericPatternHook</activity:classOrProgram>
+			<activity:visible>false</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_GENERICPAT_HK_02</common:activity>
+			<common:description>I18N[Z_GENERICPAT_HK_02.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>SERVICE</activity:executionType>
+			<activity:classOrProgram>com.atos.hook$GenericPatternHookVolvo</activity:classOrProgram>
+			<activity:visible>false</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_GENERICPAT_HK_03</common:activity>
+			<common:description>I18N[Z_GENERICPAT_HK_03.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>SERVICE</activity:executionType>
+			<activity:classOrProgram>com.atos.hook$GenericPatternHookVolvo1</activity:classOrProgram>
+			<activity:visible>false</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_PARALLELOP_HK_01</common:activity>
+			<common:description>I18N[Z_PARALLELOP_HK_01.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>SERVICE</activity:executionType>
+			<activity:classOrProgram>com.atos.hook$PostStartHookForParallelOperations</activity:classOrProgram>
+			<activity:visible>false</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_WINGEN_HK_01</common:activity>
+			<common:description>I18N[Z_WINGEN_HK_01.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>SERVICE</activity:executionType>
+			<activity:classOrProgram>com.atos.hook$VinNumberGenerationHook</activity:classOrProgram>
+			<activity:visible>false</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_ORD_RLS_WIP_HK</common:activity>
+			<common:description>I18N[Z_ORD_RLS_WIP_HK.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>SERVICE</activity:executionType>
+			<activity:classOrProgram>com.atos.hook$PostOrderReleaseHookWIP_Visibility</activity:classOrProgram>
+			<activity:visible>false</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_PRESTART_KIT</common:activity>
+			<common:description>I18N[Z_PRESTART_KIT.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>SERVICE</activity:executionType>
+			<activity:classOrProgram>com.atos.hook$PreStartHookKitting</activity:classOrProgram>
+			<activity:visible>false</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_POSTCOM_KIT</common:activity>
+			<common:description>I18N[Z_POSTCOM_KIT.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>SERVICE</activity:executionType>
+			<activity:classOrProgram>com.atos.hook$PostCompleteHookKitting</activity:classOrProgram>
+			<activity:visible>false</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+</common:serviceInvocationRequests>
+

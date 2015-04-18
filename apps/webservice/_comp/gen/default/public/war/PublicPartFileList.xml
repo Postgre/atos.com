@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<content version="4">
+<metadata>
+<development-component>
+<name>apps/webservice</name>
+<vendor>atos.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>J2EE</type>
+<sub-type>WebModule</sub-type>
+</component-type>
+</development-component>
+<public-part>
+<name>war</name>
+<purpose>assembly</purpose>
+</public-part>
+<dependencies>
+<dependency>
+<dc-ref>
+<name>engine.jee5.facade</name>
+<vendor>sap.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>J2EE Server Component</type>
+<sub-type>Primary Library</sub-type>
+</component-type>
+</dc-ref>
+<pp-ref purpose="compilation">api</pp-ref>
+<at-build-time/>
+</dependency>
+<dependency>
+<dc-ref>
+<name>engine.jee5.facade</name>
+<vendor>sap.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>J2EE Server Component</type>
+<sub-type>Primary Library</sub-type>
+</component-type>
+</dc-ref>
+<pp-ref purpose="compilation">apiwithoutjsf</pp-ref>
+<at-build-time/>
+</dependency>
+<dependency>
+<dc-ref>
+<name>me/legacy</name>
+<vendor>sap.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>External Library</type>
+<sub-type/>
+</component-type>
+</dc-ref>
+<pp-ref purpose="compilation">api</pp-ref>
+<at-build-time/>
+</dependency>
+<dependency>
+<dc-ref>
+<name>me/papi</name>
+<vendor>sap.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>External Library</type>
+<sub-type/>
+</component-type>
+</dc-ref>
+<pp-ref purpose="compilation">api</pp-ref>
+<at-build-time/>
+</dependency>
+<dependency>
+<dc-ref>
+<name>me/wpmf/libs</name>
+<vendor>sap.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>External Library</type>
+<sub-type/>
+</component-type>
+</dc-ref>
+<pp-ref purpose="compilation">api</pp-ref>
+<at-build-time/>
+</dependency>
+<dependency>
+<dc-ref>
+<name>tc/je/webservices/api</name>
+<vendor>sap.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>J2EE Server Component</type>
+<sub-type>Service</sub-type>
+</component-type>
+</dc-ref>
+<pp-ref purpose="compilation">api</pp-ref>
+<at-build-time/>
+</dependency>
+</dependencies>
+</metadata>
+<source-components/>
+<archives>
+<archive location="srcarchive" path="src/java/src.zip" type="zip"/>
+<archive location="war" path="lib/java/atos.com~apps~webservice.war" type="war">
+<property key="attributes">J2EE-Module[module-type[web]],jar,war</property>
+</archive>
+</archives>
+<entities>
+<entity>
+<name>atos.com~apps~webservice</name>
+<entity-type>WAR</entity-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="srcarchive" source-location="DC" source-path="source">
+<file path="com/atos/ws/production/DCCollectionException.java"/>
+<file path="com/atos/ws/production/DataCollectionRequest.java"/>
+<file path="com/atos/ws/production/DataCollectionResponse.java"/>
+<file path="com/atos/ws/production/DataCollectionService.java"/>
+<file path="com/atos/ws/production/LaborOnOff.java"/>
+<file path="com/atos/ws/production/PodException.java"/>
+<file path="com/atos/ws/production/PodRequest.java"/>
+<file path="com/atos/ws/production/PodResponse.java"/>
+<file path="com/atos/ws/production/PodService.java"/>
+<file path="com/atos/ws/production/postscanactivities/AssembleData.java"/>
+<file path="com/atos/ws/production/postscanactivities/AssembleManufacturedComponent.java"/>
+<file path="com/atos/ws/production/postscanactivities/AssemblePurchasedComponent.java"/>
+<file path="com/atos/ws/production/postscanactivities/AssemblyDataCollection.java"/>
+<file path="com/atos/ws/production/postscanactivities/AssemblyDataItem.java"/>
+<file path="com/atos/ws/production/postscanactivities/AssemblyDataValidationsEntity.java"/>
+<file path="com/atos/ws/production/postscanactivities/AssemblyStatus.java"/>
+<file path="com/atos/ws/production/postscanactivities/CheckActiveSfcForPvt.java"/>
+<file path="com/atos/ws/production/postscanactivities/CompareAssemblyComp.java"/>
+<file path="com/atos/ws/production/postscanactivities/CompleteActiveSfc.java"/>
+<file path="com/atos/ws/production/postscanactivities/DataVO.java"/>
+<file path="com/atos/ws/production/postscanactivities/LogNC.java"/>
+<file path="com/atos/ws/production/postscanactivities/PODCustomException.java"/>
+<file path="com/atos/ws/production/postscanactivities/PVTCheck.java"/>
+<file path="com/atos/ws/production/postscanactivities/StartInQueueSfc.java"/>
+<file path="com/atos/ws/production/postscanactivities/ValidVendorCheck.java"/>
+<file path="com/atos/ws/production/postscanactivities/datacollection/DCGroupDataVO.java"/>
+<file path="com/atos/ws/production/postscanactivities/datacollection/DCParemeterDataVO.java"/>
+</fileset>
+<fileset location="war" source-location="DC" source-path="WebContent">
+<file path="META-INF/MANIFEST.MF"/>
+<file path="WEB-INF/web-j2ee-engine.xml"/>
+</fileset>
+<fileset location="war" source-location="gen" source-path="classes">
+<file path="WEB-INF/classes/com/atos/ws/production/DCCollectionException.class" source-path="com/atos/ws/production/DCCollectionException.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/DataCollectionRequest.class" source-path="com/atos/ws/production/DataCollectionRequest.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/DataCollectionResponse.class" source-path="com/atos/ws/production/DataCollectionResponse.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/DataCollectionService.class" source-path="com/atos/ws/production/DataCollectionService.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/LaborOnOff.class" source-path="com/atos/ws/production/LaborOnOff.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/PodException.class" source-path="com/atos/ws/production/PodException.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/PodRequest.class" source-path="com/atos/ws/production/PodRequest.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/PodResponse.class" source-path="com/atos/ws/production/PodResponse.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/PodService.class" source-path="com/atos/ws/production/PodService.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/postscanactivities/AssembleData.class" source-path="com/atos/ws/production/postscanactivities/AssembleData.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/postscanactivities/AssembleManufacturedComponent.class" source-path="com/atos/ws/production/postscanactivities/AssembleManufacturedComponent.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/postscanactivities/AssemblePurchasedComponent.class" source-path="com/atos/ws/production/postscanactivities/AssemblePurchasedComponent.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/postscanactivities/AssemblyDataCollection.class" source-path="com/atos/ws/production/postscanactivities/AssemblyDataCollection.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/postscanactivities/AssemblyDataItem.class" source-path="com/atos/ws/production/postscanactivities/AssemblyDataItem.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/postscanactivities/AssemblyDataValidationsEntity.class" source-path="com/atos/ws/production/postscanactivities/AssemblyDataValidationsEntity.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/postscanactivities/AssemblyStatus.class" source-path="com/atos/ws/production/postscanactivities/AssemblyStatus.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/postscanactivities/CheckActiveSfcForPvt.class" source-path="com/atos/ws/production/postscanactivities/CheckActiveSfcForPvt.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/postscanactivities/CompareAssemblyComp.class" source-path="com/atos/ws/production/postscanactivities/CompareAssemblyComp.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/postscanactivities/CompleteActiveSfc.class" source-path="com/atos/ws/production/postscanactivities/CompleteActiveSfc.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/postscanactivities/DataVO.class" source-path="com/atos/ws/production/postscanactivities/DataVO.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/postscanactivities/LogNC.class" source-path="com/atos/ws/production/postscanactivities/LogNC.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/postscanactivities/PODCustomException.class" source-path="com/atos/ws/production/postscanactivities/PODCustomException.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/postscanactivities/PVTCheck.class" source-path="com/atos/ws/production/postscanactivities/PVTCheck.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/postscanactivities/StartInQueueSfc.class" source-path="com/atos/ws/production/postscanactivities/StartInQueueSfc.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/postscanactivities/ValidVendorCheck.class" source-path="com/atos/ws/production/postscanactivities/ValidVendorCheck.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/postscanactivities/datacollection/DCGroupDataVO.class" source-path="com/atos/ws/production/postscanactivities/datacollection/DCGroupDataVO.class"/>
+<file path="WEB-INF/classes/com/atos/ws/production/postscanactivities/datacollection/DCParemeterDataVO.class" source-path="com/atos/ws/production/postscanactivities/datacollection/DCParemeterDataVO.class"/>
+</fileset>
+</entity>
+</entities>
+</content>

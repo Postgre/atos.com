@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    development component
+                     name: apps/ear
+                   vendor: atos.com
+                     type: J2EE
+                 sub-type: Enterprise Application
+              type-vendor: sap.com
+
+       software component
+                     name: MEEXT
+                   vendor: atos.com
+
+                 location: MEEXTDC
+          source location: Administrator@WinSrv2k8R2
+            build variant: default
+
+    building on WinSrv2k8R2, Windows Server 2008 R2/x86, version 6.1
+    using Java VM 'Java HotSpot(TM) Client VM', version 20.8-b03 (Sun Microsystems Inc.)
+    build started at 2015-04-16 09:51:12 GMT-04:00 (EDT)
+
+    Build Plugin 'EnterpriseApplicationPlugin', Version 7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:34:40 +0200, CL247900)
+    detailed versions:
+    sap.com:tc/bi/anttasks#def                                   7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:49 +0200, CL247900)
+    sap.com:tc/bi/bp/enterpriseApplication#enterpriseApplication 7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:34:40 +0200, CL247900)
+    sap.com:tc/bi/core#def                                       7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:34:57 +0200, CL247900)
+    sap.com:tc/bi/exception#def                                  7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:46 +0200, CL247900)
+    sap.com:tc/bi/extddicdb#def                                  7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:55 +0200, CL247900)
+    sap.com:tc/bi/extsql#def                                     7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:50 +0200, CL247900)
+    sap.com:tc/bi/framework#def                                  7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:32:31 +0200, CL247900)
+    sap.com:tc/bi/i18n#def                                       7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:43 +0200, CL247900)
+    sap.com:tc/bi/javatech#def                                   7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:32:53 +0200, CL247900)
+    sap.com:tc/bi/jdoc#def                                       7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:47 +0200, CL247900)
+    sap.com:tc/bi/jdoc/util#def                                  7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:32:45 +0200, CL247900)
+    sap.com:tc/bi/jlincbs#def                                    7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:32:09 +0200, CL247900)
+    sap.com:tc/bi/settings#version                               7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:33:44 +0200, CL247900)
+    sap.com:tc/bi/util#util                                      7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:32:42 +0200, CL247900)
+    sap.com:tc/bi/velocity#def                                   7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:42 +0200, CL247900)
+    sap.com:tc/bi/xml#def                                        7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:44 +0200, CL247900)
+ -->
+<project name="DC Deploy build"
+         default="packDeployArchive"
+         basedir=".">
+<taskdef name="jarsap" classname="com.sap.sdm.ant.JarSAP"/>
+<taskdef name="propertybag" classname="com.sap.tools.ant.taskdefs.PropertyBag"/>
+<taskdef name="srcpacker" classname="com.sap.tc.buildplugin.ant.taskdefs.SourceArchiveCreatorTask"/>
+<taskdef name="timer" classname="com.sap.tools.ant.taskdefs.Timer"/>
+<property name="dtr-workspace" value="Administrator@WinSrv2k8R2"/>
+
+<target name="packDeployArchive">
+<copy todir="C:\workspace.jdi\0\t\9002A87ADE7418368B441192B8313F44\sda\META-INF">
+<fileset dir="C:\workspace.jdi\0\DCs\atos.com\apps\ear\_comp\META-INF"/>
+</copy>
+<timer/>
+<srcpacker destination="C:\workspace.jdi\0\t\9002A87ADE7418368B441192B8313F44\sda\src.zip" archiveLocation="srcarchive">
+<usedpublicpart dcname="apps/idat"
+                dcvendor="atos.com"
+                ppname="idat-assembly"/>
+<usedpublicpart dcname="apps/web"
+                dcvendor="atos.com"
+                ppname="war"/>
+<usedpublicpart dcname="apps/resources"
+                dcvendor="atos.com"
+                ppname="resources-assembly"/>
+<usedpublicpart dcname="apps/hook"
+                dcvendor="atos.com"
+                ppname="hook-assembly"/>
+<usedpublicpart dcname="apps/library"
+                dcvendor="atos.com"
+                ppname="archives"/>
+<usedpublicpart dcname="apps/ejb"
+                dcvendor="atos.com"
+                ppname="ejbjar"/>
+<usedpublicpart dcname="apps/webservice"
+                dcvendor="atos.com"
+                ppname="war"/>
+</srcpacker>
+<timer message="Source archive creation finished in "/>
+<timer/>
+<jarsap jarfile="C:\workspace.jdi\0\t2\9002A87ADE7418368B441192B8313F44\default\deploy\atos.com~apps~ear.ear"
+        deployfile="C:\workspace.jdi\0\t\9002A87ADE7418368B441192B8313F44\sda\META-INF\sda-dd.xml"
+        csncomponent="ATOS-EXT">
+<component vendor="atos.com"
+           name="apps/ear"
+           location="MEEXTDC"
+           counter="20150416135112"
+           scvendor="atos.com"
+           scname="MEEXT"/>
+<dependency dependencytype="GLOBAL">
+<component specificationname="me/ear"
+           implementationtitle="me/ear"
+           implementationvendorid="sap.com"/>
+</dependency>
+<fileset dir="C:\workspace.jdi\0\t\9002A87ADE7418368B441192B8313F44\sda">
+<exclude name="**/.cvsignore"/>
+<exclude name="**/.nfs*"/>
+<exclude name="**/SCCS/**"/>
+<exclude name="**/._*"/>
+<exclude name="**/#*#"/>
+<exclude name="**/.#*"/>
+<exclude name="**/.svn/**"/>
+<exclude name="**/vssver.scc"/>
+<exclude name="**/CVS/**"/>
+<exclude name="**/%*%"/>
+<exclude name="**/*~"/>
+</fileset>
+<fileset dir="C:\workspace.jdi\0\DCs\atos.com\apps\idat\_comp\gen\default\public\idat-assembly\lib\java">
+<include name="atos.com~apps~idat~idat-assembly.jar"/>
+<exclude name="**/.cvsignore"/>
+<exclude name="**/.nfs*"/>
+<exclude name="**/SCCS/**"/>
+<exclude name="**/._*"/>
+<exclude name="**/#*#"/>
+<exclude name="**/.#*"/>
+<exclude name="**/.svn/**"/>
+<exclude name="**/vssver.scc"/>
+<exclude name="**/CVS/**"/>
+<exclude name="**/%*%"/>
+<exclude name="**/*~"/>
+</fileset>
+<fileset dir="C:\workspace.jdi\0\DCs\atos.com\apps\web\_comp\gen\default\public\war\lib\java">
+<include name="atos.com~apps~web.war"/>
+<exclude name="**/.cvsignore"/>
+<exclude name="**/.nfs*"/>
+<exclude name="**/SCCS/**"/>
+<exclude name="**/._*"/>
+<exclude name="**/#*#"/>
+<exclude name="**/.#*"/>
+<exclude name="**/.svn/**"/>
+<exclude name="**/vssver.scc"/>
+<exclude name="**/CVS/**"/>
+<exclude name="**/%*%"/>
+<exclude name="**/*~"/>
+</fileset>
+<fileset dir="C:\workspace.jdi\0\DCs\atos.com\apps\resources\_comp\gen\default\public\resources-assembly\lib\java">
+<include name="atos.com~apps~resources~resources-assembly.jar"/>
+<exclude name="**/.cvsignore"/>
+<exclude name="**/.nfs*"/>
+<exclude name="**/SCCS/**"/>
+<exclude name="**/._*"/>
+<exclude name="**/#*#"/>
+<exclude name="**/.#*"/>
+<exclude name="**/.svn/**"/>
+<exclude name="**/vssver.scc"/>
+<exclude name="**/CVS/**"/>
+<exclude name="**/%*%"/>
+<exclude name="**/*~"/>
+</fileset>
+<fileset dir="C:\workspace.jdi\0\DCs\atos.com\apps\hook\_comp\gen\default\public\hook-assembly\lib\java">
+<include name="atos.com~apps~hook~hook-assembly.jar"/>
+<exclude name="**/.cvsignore"/>
+<exclude name="**/.nfs*"/>
+<exclude name="**/SCCS/**"/>
+<exclude name="**/._*"/>
+<exclude name="**/#*#"/>
+<exclude name="**/.#*"/>
+<exclude name="**/.svn/**"/>
+<exclude name="**/vssver.scc"/>
+<exclude name="**/CVS/**"/>
+<exclude name="**/%*%"/>
+<exclude name="**/*~"/>
+</fileset>
+<fileset dir="C:\workspace.jdi\0\DCs\atos.com\apps\library\_comp\gen\default\public\archives\lib\java">
+<include name="common-lang3.jar"/>
+<exclude name="**/.cvsignore"/>
+<exclude name="**/.nfs*"/>
+<exclude name="**/SCCS/**"/>
+<exclude name="**/._*"/>
+<exclude name="**/#*#"/>
+<exclude name="**/.#*"/>
+<exclude name="**/.svn/**"/>
+<exclude name="**/vssver.scc"/>
+<exclude name="**/CVS/**"/>
+<exclude name="**/%*%"/>
+<exclude name="**/*~"/>
+</fileset>
+<fileset dir="C:\workspace.jdi\0\DCs\atos.com\apps\library\_comp\gen\default\public\archives\lib\java">
+<include name="joda-time-2.0.jar"/>
+<exclude name="**/.cvsignore"/>
+<exclude name="**/.nfs*"/>
+<exclude name="**/SCCS/**"/>
+<exclude name="**/._*"/>
+<exclude name="**/#*#"/>
+<exclude name="**/.#*"/>
+<exclude name="**/.svn/**"/>
+<exclude name="**/vssver.scc"/>
+<exclude name="**/CVS/**"/>
+<exclude name="**/%*%"/>
+<exclude name="**/*~"/>
+</fileset>
+<fileset dir="C:\workspace.jdi\0\DCs\atos.com\apps\library\_comp\gen\default\public\archives\lib\java">
+<include name="jt400.jar"/>
+<exclude name="**/.cvsignore"/>
+<exclude name="**/.nfs*"/>
+<exclude name="**/SCCS/**"/>
+<exclude name="**/._*"/>
+<exclude name="**/#*#"/>
+<exclude name="**/.#*"/>
+<exclude name="**/.svn/**"/>
+<exclude name="**/vssver.scc"/>
+<exclude name="**/CVS/**"/>
+<exclude name="**/%*%"/>
+<exclude name="**/*~"/>
+</fileset>
+<fileset dir="C:\workspace.jdi\0\DCs\atos.com\apps\library\_comp\gen\default\public\archives\lib\java">
+<include name="jxl-2.6.3.jar"/>
+<exclude name="**/.cvsignore"/>
+<exclude name="**/.nfs*"/>
+<exclude name="**/SCCS/**"/>
+<exclude name="**/._*"/>
+<exclude name="**/#*#"/>
+<exclude name="**/.#*"/>
+<exclude name="**/.svn/**"/>
+<exclude name="**/vssver.scc"/>
+<exclude name="**/CVS/**"/>
+<exclude name="**/%*%"/>
+<exclude name="**/*~"/>
+</fileset>
+<fileset dir="C:\workspace.jdi\0\DCs\atos.com\apps\library\_comp\gen\default\public\archives\lib\java">
+<include name="me.status.api-150.3.0.jar"/>
+<exclude name="**/.cvsignore"/>
+<exclude name="**/.nfs*"/>
+<exclude name="**/SCCS/**"/>
+<exclude name="**/._*"/>
+<exclude name="**/#*#"/>
+<exclude name="**/.#*"/>
+<exclude name="**/.svn/**"/>
+<exclude name="**/vssver.scc"/>
+<exclude name="**/CVS/**"/>
+<exclude name="**/%*%"/>
+<exclude name="**/*~"/>
+</fileset>
+<fileset dir="C:\workspace.jdi\0\DCs\atos.com\apps\ejb\_comp\gen\default\public\ejbjar\lib\java">
+<include name="atos.com~apps~ejb.jar"/>
+<exclude name="**/.cvsignore"/>
+<exclude name="**/.nfs*"/>
+<exclude name="**/SCCS/**"/>
+<exclude name="**/._*"/>
+<exclude name="**/#*#"/>
+<exclude name="**/.#*"/>
+<exclude name="**/.svn/**"/>
+<exclude name="**/vssver.scc"/>
+<exclude name="**/CVS/**"/>
+<exclude name="**/%*%"/>
+<exclude name="**/*~"/>
+</fileset>
+<fileset dir="C:\workspace.jdi\0\DCs\atos.com\apps\webservice\_comp\gen\default\public\war\lib\java">
+<include name="atos.com~apps~webservice.war"/>
+<exclude name="**/.cvsignore"/>
+<exclude name="**/.nfs*"/>
+<exclude name="**/SCCS/**"/>
+<exclude name="**/._*"/>
+<exclude name="**/#*#"/>
+<exclude name="**/.#*"/>
+<exclude name="**/.svn/**"/>
+<exclude name="**/vssver.scc"/>
+<exclude name="**/CVS/**"/>
+<exclude name="**/%*%"/>
+<exclude name="**/*~"/>
+</fileset>
+</jarsap>
+<timer message="JarSAP finished in "/>
+</target>
+</project>

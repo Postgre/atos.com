@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<content version="4">
+<metadata>
+<development-component>
+<name>apps/ejb</name>
+<vendor>atos.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>J2EE</type>
+<sub-type>EJBModule</sub-type>
+</component-type>
+</development-component>
+<public-part>
+<name>client</name>
+<purpose>compilation</purpose>
+</public-part>
+<dependencies>
+<dependency>
+<dc-ref>
+<name>apps/library</name>
+<vendor>atos.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>External Library</type>
+<sub-type/>
+</component-type>
+</dc-ref>
+<pp-ref purpose="compilation">api</pp-ref>
+<at-build-time/>
+</dependency>
+<dependency>
+<dc-ref>
+<name>apps/library</name>
+<vendor>atos.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>External Library</type>
+<sub-type/>
+</component-type>
+</dc-ref>
+<pp-ref purpose="assembly">archives</pp-ref>
+<at-build-time/>
+</dependency>
+<dependency>
+<dc-ref>
+<name>engine.jee5.facade</name>
+<vendor>sap.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>J2EE Server Component</type>
+<sub-type>Primary Library</sub-type>
+</component-type>
+</dc-ref>
+<pp-ref purpose="compilation">api</pp-ref>
+<at-build-time/>
+</dependency>
+<dependency>
+<dc-ref>
+<name>me/legacy</name>
+<vendor>sap.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>External Library</type>
+<sub-type/>
+</component-type>
+</dc-ref>
+<pp-ref purpose="compilation">api</pp-ref>
+<at-build-time/>
+</dependency>
+<dependency>
+<dc-ref>
+<name>me/papi</name>
+<vendor>sap.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>External Library</type>
+<sub-type/>
+</component-type>
+</dc-ref>
+<pp-ref purpose="compilation">api</pp-ref>
+<at-build-time/>
+</dependency>
+<dependency>
+<dc-ref>
+<name>me/wpmf/libs</name>
+<vendor>sap.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>External Library</type>
+<sub-type/>
+</component-type>
+</dc-ref>
+<pp-ref purpose="compilation">api</pp-ref>
+<at-build-time/>
+</dependency>
+</dependencies>
+</metadata>
+<source-components/>
+<archives>
+<archive location="javalib" path="lib/java/atos.com~apps~ejb~client.jar" type="jar">
+<property key="attributes">jar,java-library</property>
+</archive>
+<archive location="srcarchive" path="src/java/src.zip" type="zip"/>
+</archives>
+<entities>
+<entity>
+<name>com.atos.assembly_screenEJB</name>
+<package>com/atos/assembly_screenEJB</package>
+<entity-type>Java Package Tree</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes">
+<file path="com/atos/assembly_screenEJB/AseemblyDataScreenBean.class"/>
+<file path="com/atos/assembly_screenEJB/AssemblyData.class"/>
+<file path="com/atos/assembly_screenEJB/AssemblyScreenInterface.class"/>
+<file path="com/atos/assembly_screenEJB/CustomException.class"/>
+<file path="com/atos/assembly_screenEJB/MaterialCustomDataItem.class"/>
+<file path="com/atos/assembly_screenEJB/MaterialItem.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule">
+<file path="com/atos/assembly_screenEJB/AseemblyDataScreenBean.java"/>
+<file path="com/atos/assembly_screenEJB/AssemblyData.java"/>
+<file path="com/atos/assembly_screenEJB/AssemblyScreenInterface.java"/>
+<file path="com/atos/assembly_screenEJB/CustomException.java"/>
+<file path="com/atos/assembly_screenEJB/MaterialCustomDataItem.java"/>
+<file path="com/atos/assembly_screenEJB/MaterialItem.java"/>
+</fileset>
+</entity>
+<entity>
+<name>com.atos.kittingEJB</name>
+<package>com/atos/kittingEJB</package>
+<entity-type>Java Package Tree</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes">
+<file path="com/atos/kittingEJB/KittingAssignmentControllerBean.class"/>
+<file path="com/atos/kittingEJB/KittingAssignmentScreenInterface.class"/>
+<file path="com/atos/kittingEJB/KittingDefinitionControllerBean.class"/>
+<file path="com/atos/kittingEJB/KittingDefinitionData.class"/>
+<file path="com/atos/kittingEJB/KittingDefinitionInterface.class"/>
+<file path="com/atos/kittingEJB/KittingHookControllerBean.class"/>
+<file path="com/atos/kittingEJB/KittingHookInterface.class"/>
+<file path="com/atos/kittingEJB/MaterialCustomDataItem.class"/>
+<file path="com/atos/kittingEJB/MaterialItem.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule">
+<file path="com/atos/kittingEJB/KittingAssignmentControllerBean.java"/>
+<file path="com/atos/kittingEJB/KittingAssignmentScreenInterface.java"/>
+<file path="com/atos/kittingEJB/KittingDefinitionControllerBean.java"/>
+<file path="com/atos/kittingEJB/KittingDefinitionData.java"/>
+<file path="com/atos/kittingEJB/KittingDefinitionInterface.java"/>
+<file path="com/atos/kittingEJB/KittingHookControllerBean.java"/>
+<file path="com/atos/kittingEJB/KittingHookInterface.java"/>
+<file path="com/atos/kittingEJB/MaterialCustomDataItem.java"/>
+<file path="com/atos/kittingEJB/MaterialItem.java"/>
+</fileset>
+</entity>
+<entity>
+<name>com.atos.ordersequenceEJB</name>
+<package>com/atos/ordersequenceEJB</package>
+<entity-type>Java Package Tree</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="gen" source-path="classes">
+<file path="com/atos/ordersequenceEJB/CustomLeastPriorityException.class"/>
+<file path="com/atos/ordersequenceEJB/MaterialCustomDataItem.class"/>
+<file path="com/atos/ordersequenceEJB/MaterialItem.class"/>
+<file path="com/atos/ordersequenceEJB/OrderSequenceData.class"/>
+<file path="com/atos/ordersequenceEJB/OrderSequenceDataBean.class"/>
+<file path="com/atos/ordersequenceEJB/OrderSequenceDataInterface.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="ejbModule">
+<file path="com/atos/ordersequenceEJB/CustomLeastPriorityException.java"/>
+<file path="com/atos/ordersequenceEJB/MaterialCustomDataItem.java"/>
+<file path="com/atos/ordersequenceEJB/MaterialItem.java"/>
+<file path="com/atos/ordersequenceEJB/OrderSequenceData.java"/>
+<file path="com/atos/ordersequenceEJB/OrderSequenceDataBean.java"/>
+<file path="com/atos/ordersequenceEJB/OrderSequenceDataInterface.java"/>
+</fileset>
+</entity>
+</entities>
+</content>

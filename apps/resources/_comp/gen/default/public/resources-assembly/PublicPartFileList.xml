@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<content version="4">
+<metadata>
+<development-component>
+<name>apps/resources</name>
+<vendor>atos.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>Java</type>
+<sub-type/>
+</component-type>
+</development-component>
+<public-part>
+<name>resources-assembly</name>
+<purpose>assembly</purpose>
+</public-part>
+<dependencies/>
+</metadata>
+<source-components/>
+<archives>
+<archive location="javalib" path="lib/java/atos.com~apps~resources~resources-assembly.jar" type="jar">
+<property key="attributes">jar,java-library</property>
+</archive>
+</archives>
+<entities>
+<entity>
+<name>service-config.xml</name>
+<entity-type>File</entity-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="DC" source-path="src">
+<file path="service-config.xml"/>
+</fileset>
+</entity>
+<entity>
+<name>com.atos.bundles</name>
+<package>com/atos/bundles</package>
+<entity-type>Java Package Tree</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="DC" source-path="src">
+<file path="com/atos/bundles/LocaleSpecificText.properties"/>
+</fileset>
+</entity>
+</entities>
+</content>

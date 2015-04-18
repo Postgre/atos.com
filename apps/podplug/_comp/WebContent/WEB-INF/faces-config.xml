@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd"
+    version="1.2">
+   <managed-bean>
+        <managed-bean-name>podConfiguratorFilterBean</managed-bean-name>
+        <managed-bean-class>com.atos.refreshpod.TestConfiguratorFilter</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>refreshPlugin</managed-bean-name>
+        <managed-bean-class>com.atos.refreshpod.RefreshPlugin</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    
+	<managed-bean>
+		<managed-bean-name>laboronPlugin</managed-bean-name>
+		<managed-bean-class>com.atos.wpmf.web.podplugin.LaborOnOff</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>assemblyPlugin</managed-bean-name>
+		<managed-bean-class>com.atos.wpmf.web.podplugin.postscanactivities.AssemblyStatus</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	
+	<managed-bean>
+		<managed-bean-name>podHeaderExtension</managed-bean-name>
+		<managed-bean-class>com.atos.wpmf.web.podplugin.PodHeaderExtension</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	
+ 	
+</faces-config>

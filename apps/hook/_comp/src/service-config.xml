@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-config SYSTEM "http://www.visiprise.com/dtd/service-config.dtd">
+<service-config moduleId="com.atos.hook">
+	<!--If IDAT files are needed for the DC make sure ConfigDataLoaderParent service is specified-->
+	<import moduleId="com.sap.me.plant" service="ConfigDataLoaderParent"/>
+	<!-- Import required to create a new service extension-->
+	<import moduleId="com.sap.me.common" service="Prototype"/>
+	<!--Service declaration pointing to ConfigDataLoaderParent to trigger loading of configuration data from a software component 
+	that is deployed separately from the SAP ME software component. This class will read each file using the specific path 
+	and invoke the XmlInvocationService to load the configuration data into the system. -->				
+	<service name="LoaderService" parent="ConfigDataLoaderParent"/>
+	<!-- New service definition. You must declare the service class name. -->
+	<service name="CreateOperationHook" class="com.atos.hook.CreateOperationHook" parent="Prototype" />
+	<service name="PostOrderReleaseHook" class="com.atos.hook.PostOrderReleaseHook" parent="Prototype" />	
+	<service name="PreStartHookSequence" class="com.atos.hook.PreStartHookSequence" parent="Prototype" />	
+	<service name="PostStartHookSequence" class="com.atos.hook.PostStartHookSequence" parent="Prototype" />	
+	<service name="GenericPatternHook" class="com.atos.hook.GenericPatternHook" parent="Prototype" />
+	<service name="GenericPatternHookVolvo" class="com.atos.hook.GenericPatternHookVolvo" parent="Prototype" />
+	<service name="GenericPatternHookVolvo1" class="com.atos.hook.GenericPatternHookVolvo1" parent="Prototype" />
+	<service name="PostStartHookForParallelOperations" class="com.atos.hook.PostStartHookForParallelOperations" parent="Prototype" />
+	<service name="VinNumberGenerationHook" class="com.atos.hook.VinNumberGenerationHook" parent="Prototype" />
+	<service name="PreStartHookKitting" class="com.atos.hook.PreStartHookKitting" parent="Prototype" />
+	<service name="PostCompleteHookKitting" class="com.atos.hook.PostCompleteHookKitting" parent="Prototype" />
+	<service name="PostOrderReleaseHookWIP_Visibility" class="com.atos.hook.PostOrderReleaseHookWIP_Visibility" parent="Prototype" />
+	
+</service-config>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE service-config SYSTEM "http://www.visiprise.com/dtd/service-config.dtd"> <service-config moduleId="com.atos.webext"> 
+<import moduleId="com.sap.me.activity" service="ExtensionLoaderParent"/> 
+<service name="ExtensionLoader" parent="ExtensionLoaderParent"/> 
+</service-config>

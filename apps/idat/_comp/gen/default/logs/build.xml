@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    development component
+                     name: apps/idat
+                   vendor: atos.com
+                     type: Java
+                 sub-type: 
+              type-vendor: sap.com
+
+       software component
+                     name: MEEXT
+                   vendor: atos.com
+
+                 location: MEEXTDC
+          source location: Administrator@WinSrv2k8R2
+            build variant: default
+
+    building on WinSrv2k8R2, Windows Server 2008 R2/x86, version 6.1
+    using Java VM 'Java HotSpot(TM) Client VM', version 20.8-b03 (Sun Microsystems Inc.)
+    build started at 2015-04-16 08:26:21 GMT-04:00 (EDT)
+
+    Build Plugin 'JavaPlugin', Version 7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:34:12 +0200, CL247900)
+    detailed versions:
+    sap.com:tc/bi/anttasks#def      7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:49 +0200, CL247900)
+    sap.com:tc/bi/bp/javaLib#saplib 7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:34:12 +0200, CL247900)
+    sap.com:tc/bi/core#def          7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:34:57 +0200, CL247900)
+    sap.com:tc/bi/exception#def     7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:46 +0200, CL247900)
+    sap.com:tc/bi/extddicdb#def     7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:55 +0200, CL247900)
+    sap.com:tc/bi/extsql#def        7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:50 +0200, CL247900)
+    sap.com:tc/bi/framework#def     7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:32:31 +0200, CL247900)
+    sap.com:tc/bi/i18n#def          7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:43 +0200, CL247900)
+    sap.com:tc/bi/javatech#def      7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:32:53 +0200, CL247900)
+    sap.com:tc/bi/jdoc#def          7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:47 +0200, CL247900)
+    sap.com:tc/bi/jdoc/util#def     7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:32:45 +0200, CL247900)
+    sap.com:tc/bi/jlincbs#def       7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:32:09 +0200, CL247900)
+    sap.com:tc/bi/settings#version  7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:33:44 +0200, CL247900)
+    sap.com:tc/bi/util#util         7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:32:42 +0200, CL247900)
+    sap.com:tc/bi/velocity#def      7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:42 +0200, CL247900)
+    sap.com:tc/bi/xml#def           7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:44 +0200, CL247900)
+ -->
+<project name="DC Build"
+         default="build"
+         basedir=".">
+<taskdef name="checkfileset" classname="com.sap.tools.ant.taskdefs.EmptyFilesetCheck"/>
+<taskdef name="jlinppcheck" classname="com.sap.tc.buildplugin.pp.ant.JLinEECheckTask"/>
+<taskdef name="pppacker" classname="com.sap.tc.buildplugin.pp.PPPackTask"/>
+<taskdef name="propertybag" classname="com.sap.tools.ant.taskdefs.PropertyBag"/>
+<taskdef name="timer" classname="com.sap.tools.ant.taskdefs.Timer"/>
+<taskdef name="xlf2prop" classname="com.sap.tc.buildplugin.util.XlfConverter"/>
+
+<target name="compile">
+<mkdir dir="C:\workspace.jdi\0\t\88AB613C192D78834497B93A459422C3\classes"/>
+<!-- begin generator extension type 'sap.com~sqlj' for generator id 'sap.com~javac' -->
+<!-- No *.sqlj files found, skipping SQLJ preprocessing. -->
+<!-- end generator extension type 'sap.com~sqlj' for generator id 'sap.com~javac' -->
+<!-- begin generator id 'sap.com~javac', type 'sap.com~javac' -->
+<echo message="Starting Java compiler using the current JVM"/>
+<timer/>
+<echo message="Settings:"/>
+<echo message="        debug: on"/>
+<echo message="     optimize: off"/>
+<echo message="  deprecation: default"/>
+<echo message="      verbose: default"/>
+<echo message="     encoding: UTF-8"/>
+<echo message="       source: 1.6"/>
+<echo message="       target: 1.6"/>
+<echo message="  source path: C:\workspace.jdi\0\DCs\atos.com\apps\idat\_comp\src"/>
+<echo message="   class path: none"/>
+<echo message="   output dir: C:\workspace.jdi\0\t\88AB613C192D78834497B93A459422C3\classes"/>
+<checkfileset fail="false">
+<fileset dir="C:\workspace.jdi\0\DCs\atos.com\apps\idat\_comp\src">
+<include name="**/*.class"/>
+</fileset>
+</checkfileset>
+<javac includeAntRuntime="no"
+       destdir="C:\workspace.jdi\0\t\88AB613C192D78834497B93A459422C3\classes"
+       encoding="UTF-8"
+       deprecation="false"
+       debug="on"
+       target="1.6"
+       source="1.6"
+       tempdir="C:\workspace.jdi\0\t\88AB613C192D78834497B93A459422C3">
+<src path="C:\workspace.jdi\0\DCs\atos.com\apps\idat\_comp\src"/>
+<include name="**/*.java"/>
+</javac>
+<timer message="Java compilation finished in "/>
+<!-- end generator id 'sap.com~javac', type 'sap.com~javac' -->
+<!-- begin generator extension type 'sap.com~jlin' for generator id 'sap.com~javac' -->
+<!-- JLin disabled. -->
+<!-- end generator extension type 'sap.com~jlin' for generator id 'sap.com~javac' -->
+<!-- begin generator extension type 'sap.com~sqlj' for generator id 'sap.com~javac' -->
+<!-- No *.sqlj files found, skipping SQLJ post-processing. -->
+<!-- end generator extension type 'sap.com~sqlj' for generator id 'sap.com~javac' -->
+<!-- begin generator extension type 'sap.com~jdo' for generator id 'sap.com~javac' -->
+<!-- No *.jdo files found, skipping JDO enhancer. -->
+<!-- end generator extension type 'sap.com~jdo' for generator id 'sap.com~javac' -->
+<!-- begin generator extension type 'sap.com~xlf2prop' for generator id 'sap.com~javac' -->
+<echo message="Start XLF conversion"/>
+<timer/>
+<xlf2prop todir="C:\workspace.jdi\0\t\88AB613C192D78834497B93A459422C3\classes">
+<fileset dir="C:\workspace.jdi\0\DCs\atos.com\apps\idat\_comp\src"/>
+</xlf2prop>
+<timer message="XLF conversion finished in "/>
+<!-- end generator extension type 'sap.com~xlf2prop' for generator id 'sap.com~javac' -->
+<!-- begin generator extension type 'sap.com~jdoc' for generator id 'sap.com~javac' -->
+<!-- Javadoc generation disabled. -->
+<!-- end generator extension type 'sap.com~jdoc' for generator id 'sap.com~javac' -->
+</target>
+
+<target name="createPublicParts" depends="compile">
+<timer/>
+<pppacker ppname="idat-assembly">
+</pppacker>
+<timer message="Packing of public part 'idat-assembly' finished in "/>
+<jlinppcheck/>
+</target>
+
+<target name="build" depends="compile,createPublicParts">
+
+</target>
+</project>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    development component
+                     name: apps/ear
+                   vendor: atos.com
+                     type: J2EE
+                 sub-type: Enterprise Application
+              type-vendor: sap.com
+
+       software component
+                     name: MEEXT
+                   vendor: atos.com
+
+                 location: MEEXTDC
+          source location: Administrator@WinSrv2k8R2
+            build variant: default
+
+    building on WinSrv2k8R2, Windows Server 2008 R2/x86, version 6.1
+    using Java VM 'Java HotSpot(TM) Client VM', version 20.8-b03 (Sun Microsystems Inc.)
+    build started at 2015-04-16 09:51:12 GMT-04:00 (EDT)
+
+    Build Plugin 'EnterpriseApplicationPlugin', Version 7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:34:40 +0200, CL247900)
+    detailed versions:
+    sap.com:tc/bi/anttasks#def                                   7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:49 +0200, CL247900)
+    sap.com:tc/bi/bp/enterpriseApplication#enterpriseApplication 7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:34:40 +0200, CL247900)
+    sap.com:tc/bi/core#def                                       7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:34:57 +0200, CL247900)
+    sap.com:tc/bi/exception#def                                  7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:46 +0200, CL247900)
+    sap.com:tc/bi/extddicdb#def                                  7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:55 +0200, CL247900)
+    sap.com:tc/bi/extsql#def                                     7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:50 +0200, CL247900)
+    sap.com:tc/bi/framework#def                                  7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:32:31 +0200, CL247900)
+    sap.com:tc/bi/i18n#def                                       7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:43 +0200, CL247900)
+    sap.com:tc/bi/javatech#def                                   7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:32:53 +0200, CL247900)
+    sap.com:tc/bi/jdoc#def                                       7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:47 +0200, CL247900)
+    sap.com:tc/bi/jdoc/util#def                                  7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:32:45 +0200, CL247900)
+    sap.com:tc/bi/jlincbs#def                                    7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:32:09 +0200, CL247900)
+    sap.com:tc/bi/settings#version                               7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:33:44 +0200, CL247900)
+    sap.com:tc/bi/util#util                                      7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:32:42 +0200, CL247900)
+    sap.com:tc/bi/velocity#def                                   7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:42 +0200, CL247900)
+    sap.com:tc/bi/xml#def                                        7.30 SP 2 (NW731CORE_07_REL, built on 2013-04-11 18:31:44 +0200, CL247900)
+ -->
+<project name="DC Build"
+         default="build"
+         basedir=".">
+<taskdef name="cdu" classname="com.sap.tc.buildplugin.deploy.DeployUnitTask"/>
+<taskdef name="propertybag" classname="com.sap.tools.ant.taskdefs.PropertyBag"/>
+<taskdef name="timer" classname="com.sap.tools.ant.taskdefs.Timer"/>
+<!-- public part creation skipped because there are no public parts defined. -->
+
+<target name="createDeployArchive">
+<cdu unit="default" deployfolder="C:\workspace.jdi\0\t2\9002A87ADE7418368B441192B8313F44\default\deploy">
+<descriptor type="sda-deployment-descriptor" file="C:\workspace.jdi\0\DCs\atos.com\apps\ear\_comp\META-INF\sda-dd.xml"/>
+<fileset dir="C:\workspace.jdi\0\DCs\atos.com\apps\ear\_comp\META-INF" prefix="META-INF"/>
+</cdu>
+</target>
+
+<target name="build" depends="createDeployArchive">
+
+</target>
+</project>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<content version="4">
+<metadata>
+<development-component>
+<name>apps/library</name>
+<vendor>atos.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>External Library</type>
+<sub-type/>
+</component-type>
+</development-component>
+<public-part>
+<name>archives</name>
+<purpose>assembly</purpose>
+</public-part>
+<dependencies/>
+</metadata>
+<source-components/>
+<archives>
+<archive location="common-lang3.jar" type="filesystem">
+<additional-path attributes="jar,java-library">lib/java/common-lang3.jar</additional-path>
+</archive>
+<archive location="joda-time-2.0.jar" type="filesystem">
+<additional-path attributes="jar,java-library">lib/java/joda-time-2.0.jar</additional-path>
+</archive>
+<archive location="jt400.jar" type="filesystem">
+<additional-path attributes="jar,java-library">lib/java/jt400.jar</additional-path>
+</archive>
+<archive location="jxl-2.6.3.jar" type="filesystem">
+<additional-path attributes="jar,java-library">lib/java/jxl-2.6.3.jar</additional-path>
+</archive>
+<archive location="me.status.api-150.3.0.jar" type="filesystem">
+<additional-path attributes="jar,java-library">lib/java/me.status.api-150.3.0.jar</additional-path>
+</archive>
+</archives>
+<entities>
+<entity>
+<name>common-lang3.jar</name>
+<entity-type>Archive</entity-type>
+<entity-sub-type>Java Library</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="common-lang3.jar" source-location="DC" source-path="libraries">
+<file path="lib/java/common-lang3.jar" source-path="common-lang3.jar"/>
+</fileset>
+</entity>
+<entity>
+<name>joda-time-2.0.jar</name>
+<entity-type>Archive</entity-type>
+<entity-sub-type>Java Library</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="joda-time-2.0.jar" source-location="DC" source-path="libraries">
+<file path="lib/java/joda-time-2.0.jar" source-path="joda-time-2.0.jar"/>
+</fileset>
+</entity>
+<entity>
+<name>jt400.jar</name>
+<entity-type>Archive</entity-type>
+<entity-sub-type>Java Library</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="jt400.jar" source-location="DC" source-path="libraries">
+<file path="lib/java/jt400.jar" source-path="jt400.jar"/>
+</fileset>
+</entity>
+<entity>
+<name>jxl-2.6.3.jar</name>
+<entity-type>Archive</entity-type>
+<entity-sub-type>Java Library</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="jxl-2.6.3.jar" source-location="DC" source-path="libraries">
+<file path="lib/java/jxl-2.6.3.jar" source-path="jxl-2.6.3.jar"/>
+</fileset>
+</entity>
+<entity>
+<name>me.status.api-150.3.0.jar</name>
+<entity-type>Archive</entity-type>
+<entity-sub-type>Java Library</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="me.status.api-150.3.0.jar" source-location="DC" source-path="libraries">
+<file path="lib/java/me.status.api-150.3.0.jar" source-path="me.status.api-150.3.0.jar"/>
+</fileset>
+</entity>
+</entities>
+</content>

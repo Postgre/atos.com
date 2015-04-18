@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<content version="4">
+<metadata>
+<development-component>
+<name>apps/hook</name>
+<vendor>atos.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>Java</type>
+<sub-type/>
+</component-type>
+</development-component>
+<public-part>
+<name>hook-assembly</name>
+<purpose>assembly</purpose>
+</public-part>
+<dependencies>
+<dependency>
+<dc-ref>
+<name>apps/ejb</name>
+<vendor>atos.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>J2EE</type>
+<sub-type>EJBModule</sub-type>
+</component-type>
+</dc-ref>
+<pp-ref purpose="compilation">client</pp-ref>
+<at-build-time/>
+</dependency>
+<dependency>
+<dc-ref>
+<name>apps/library</name>
+<vendor>atos.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>External Library</type>
+<sub-type/>
+</component-type>
+</dc-ref>
+<pp-ref purpose="compilation">api</pp-ref>
+<at-build-time/>
+</dependency>
+<dependency>
+<dc-ref>
+<name>apps/library</name>
+<vendor>atos.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>External Library</type>
+<sub-type/>
+</component-type>
+</dc-ref>
+<pp-ref purpose="assembly">archives</pp-ref>
+<at-build-time/>
+</dependency>
+<dependency>
+<dc-ref>
+<name>me/legacy</name>
+<vendor>sap.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>External Library</type>
+<sub-type/>
+</component-type>
+</dc-ref>
+<pp-ref purpose="compilation">api</pp-ref>
+<at-build-time/>
+</dependency>
+<dependency>
+<dc-ref>
+<name>me/papi</name>
+<vendor>sap.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>External Library</type>
+<sub-type/>
+</component-type>
+</dc-ref>
+<pp-ref purpose="compilation">api</pp-ref>
+<at-build-time/>
+</dependency>
+<dependency>
+<dc-ref>
+<name>me/wpmf/libs</name>
+<vendor>sap.com</vendor>
+<component-type>
+<vendor>sap.com</vendor>
+<type>External Library</type>
+<sub-type/>
+</component-type>
+</dc-ref>
+<pp-ref purpose="compilation">api</pp-ref>
+<at-build-time/>
+</dependency>
+</dependencies>
+</metadata>
+<source-components/>
+<archives>
+<archive location="javalib" path="lib/java/atos.com~apps~hook~hook-assembly.jar" type="jar">
+<property key="attributes">jar,java-library</property>
+</archive>
+<archive location="srcarchive" path="src/java/src.zip" type="zip"/>
+</archives>
+<entities>
+<entity>
+<name>service-config.xml</name>
+<entity-type>File</entity-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="DC" source-path="src">
+<file path="service-config.xml"/>
+</fileset>
+</entity>
+<entity>
+<name>com.atos.hook</name>
+<package>com/atos/hook</package>
+<entity-type>Java Package Tree</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="DC" source-path="src">
+<file path="com/atos/hook/idat/ActivityHookIDAT.xml"/>
+</fileset>
+<fileset location="javalib" source-location="gen" source-path="classes">
+<file path="com/atos/hook/AttributeValueConstants.class"/>
+<file path="com/atos/hook/CreateOperationHook.class"/>
+<file path="com/atos/hook/GenericPatternHook.class"/>
+<file path="com/atos/hook/GenericPatternHookVolvo$PatternSeqComparator.class"/>
+<file path="com/atos/hook/GenericPatternHookVolvo.class"/>
+<file path="com/atos/hook/GenericPatternHookVolvo1.class"/>
+<file path="com/atos/hook/Model.class"/>
+<file path="com/atos/hook/Pattern.class"/>
+<file path="com/atos/hook/PatternSequence.class"/>
+<file path="com/atos/hook/PostCompleteHookKitting.class"/>
+<file path="com/atos/hook/PostOrderReleaseHook.class"/>
+<file path="com/atos/hook/PostOrderReleaseHookWIP_Visibility.class"/>
+<file path="com/atos/hook/PostStartHookForParallelOperations.class"/>
+<file path="com/atos/hook/PostStartHookSequence.class"/>
+<file path="com/atos/hook/PreStartHookKitting.class"/>
+<file path="com/atos/hook/PreStartHookSequence.class"/>
+<file path="com/atos/hook/SalesType.class"/>
+<file path="com/atos/hook/VinGenerationCustomException.class"/>
+<file path="com/atos/hook/VinNumberGenerationHook$1.class"/>
+<file path="com/atos/hook/VinNumberGenerationHook.class"/>
+<file path="com/atos/hook/WheelBaseCode.class"/>
+<file path="com/atos/hook/customDataEnums/CheckDigit.class"/>
+<file path="com/atos/hook/customDataEnums/Driver.class"/>
+<file path="com/atos/hook/customDataEnums/Version.class"/>
+<file path="com/atos/hook/postscanactivities/PODCustomException.class"/>
+<file path="com/atos/hook/postscanactivities/StartSfcDataVO.class"/>
+</fileset>
+<fileset location="srcarchive" source-location="DC" source-path="src">
+<file path="com/atos/hook/AttributeValueConstants.java"/>
+<file path="com/atos/hook/CreateOperationHook.java"/>
+<file path="com/atos/hook/GenericPatternHook.java"/>
+<file path="com/atos/hook/GenericPatternHookVolvo.java"/>
+<file path="com/atos/hook/GenericPatternHookVolvo1.java"/>
+<file path="com/atos/hook/Model.java"/>
+<file path="com/atos/hook/Pattern.java"/>
+<file path="com/atos/hook/PatternSequence.java"/>
+<file path="com/atos/hook/PostCompleteHookKitting.java"/>
+<file path="com/atos/hook/PostOrderReleaseHook.java"/>
+<file path="com/atos/hook/PostOrderReleaseHookWIP_Visibility.java"/>
+<file path="com/atos/hook/PostStartHookForParallelOperations.java"/>
+<file path="com/atos/hook/PostStartHookSequence.java"/>
+<file path="com/atos/hook/PreStartHookKitting.java"/>
+<file path="com/atos/hook/PreStartHookSequence.java"/>
+<file path="com/atos/hook/SalesType.java"/>
+<file path="com/atos/hook/VinGenerationCustomException.java"/>
+<file path="com/atos/hook/VinNumberGenerationHook.java"/>
+<file path="com/atos/hook/WheelBaseCode.java"/>
+<file path="com/atos/hook/customDataEnums/CheckDigit.java"/>
+<file path="com/atos/hook/customDataEnums/Driver.java"/>
+<file path="com/atos/hook/customDataEnums/Version.java"/>
+<file path="com/atos/hook/postscanactivities/PODCustomException.java"/>
+<file path="com/atos/hook/postscanactivities/StartSfcDataVO.java"/>
+</fileset>
+</entity>
+<entity>
+<name>com.atos.hook.idat</name>
+<package>com/atos/hook/idat</package>
+<entity-type>Java Package Tree</entity-type>
+<entity-sub-type>Class</entity-sub-type>
+<entity-type-vendor>sap.com</entity-type-vendor>
+<fileset location="javalib" source-location="DC" source-path="src">
+<file path="com/atos/hook/idat/ActivityHookIDAT.xml"/>
+</fileset>
+</entity>
+</entities>
+</content>

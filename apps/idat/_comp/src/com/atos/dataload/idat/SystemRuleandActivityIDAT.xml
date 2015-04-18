@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<common:serviceInvocationRequests xmlns:appconfig="http://www.sap.com/me/appconfig" xmlns:activity="http://www.sap.com/me/activity" xmlns:common="http://www.sap.com/me/common">
+
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.appconfig</moduleId>
+		<serviceName>SystemRuleService</serviceName>
+		<methodName>createSystemRule</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="appconfig:SystemRuleConfiguration">
+			<appconfig:systemRule>REF_PREV_BOM_TMP</appconfig:systemRule>
+			<appconfig:valueObjectType>STRING</appconfig:valueObjectType>
+			<appconfig:ruleSubGroup>SYSTEM_SETUP</appconfig:ruleSubGroup>
+			<appconfig:longDescription>Refer BOM Previous Version Template - True or False</appconfig:longDescription>
+			<appconfig:description>I18N[REF_PREV_BOM_TMP.systemRule.DESC]</appconfig:description>
+			<appconfig:sequence>10</appconfig:sequence>
+			<appconfig:ruleType>STANDARD</appconfig:ruleType>
+			<appconfig:systemRuleGroupRef>
+				<reference type="SYSTEM_RULE_GROUP">
+					<ruleGroup>SYSTEM_SETUP</ruleGroup>
+				</reference>
+			</appconfig:systemRuleGroupRef>
+			<appconfig:systemRuleSettingList>
+				<appconfig:systemRuleSetting>TRUE</appconfig:systemRuleSetting>
+				<appconfig:systemRuleOverridable>true</appconfig:systemRuleOverridable>
+				<appconfig:site>*</appconfig:site>
+			</appconfig:systemRuleSettingList>
+		</requests>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="appconfig:SystemRuleConfiguration">
+			<appconfig:systemRule>USE_BOM_TMP_CHK</appconfig:systemRule>
+			<appconfig:valueObjectType>STRING</appconfig:valueObjectType>
+			<appconfig:ruleSubGroup>SYSTEM_SETUP</appconfig:ruleSubGroup>
+			<appconfig:longDescription>Refer BOM Templates and Perform Operation Mapping - True or False</appconfig:longDescription>
+			<appconfig:description>I18N[USE_BOM_TMP_CHK.systemRule.DESC]</appconfig:description>
+			<appconfig:sequence>10</appconfig:sequence>
+			<appconfig:ruleType>STANDARD</appconfig:ruleType>
+			<appconfig:systemRuleGroupRef>
+				<reference type="SYSTEM_RULE_GROUP">
+					<ruleGroup>SYSTEM_SETUP</ruleGroup>
+				</reference>
+			</appconfig:systemRuleGroupRef>
+			<appconfig:systemRuleSettingList>
+				<appconfig:systemRuleSetting>TRUE</appconfig:systemRuleSetting>
+				<appconfig:systemRuleOverridable>true</appconfig:systemRuleOverridable>
+				<appconfig:site>*</appconfig:site>
+			</appconfig:systemRuleSettingList>
+		</requests>
+	</common:serviceInvocationRequest>
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_ORDERSEQ_01</common:activity>
+			<common:description>I18N[Z_ORDERSEQ_01.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>STANDALONE_JSP</activity:executionType>
+			<activity:classOrProgram>%PROTOCOL%://%SERVER%:%PORT%/MEEXTDC~apps~web~atos.com/com/atos/ordersequence/OrderSequence.jsf</activity:classOrProgram>
+			<activity:visible>true</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_KIT_DEFSC_01</common:activity>
+			<common:description>I18N[Z_KIT_DEFSC_01.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>STANDALONE_JSP</activity:executionType>
+			<activity:classOrProgram>%PROTOCOL%://%SERVER%:%PORT%/MEEXTDC~apps~web~atos.com/com/atos/kitting/KitDefinitionScreen.jsf</activity:classOrProgram>
+			<activity:visible>true</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+
+<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_KIT_ASSSC_01</common:activity>
+			<common:description>I18N[Z_KIT_ASSSC_01.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>STANDALONE_JSP</activity:executionType>
+			<activity:classOrProgram>%PROTOCOL%://%SERVER%:%PORT%/MEEXTDC~apps~web~atos.com/com/atos/kitting/KitAssignmentScreen.jsf</activity:classOrProgram>
+			<activity:visible>true</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_ASSEMBLY_DATA_01</common:activity>
+			<common:description>I18N[Z_ASSEMBLY_DATA_01.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>STANDALONE_JSP</activity:executionType>
+			<activity:classOrProgram>%PROTOCOL%://%SERVER%:%PORT%/MEEXTDC~apps~web~atos.com/com/atos/assembly_screen/AssemblyDataScreen.jsf</activity:classOrProgram>
+			<activity:visible>true</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	
+		<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_ASSCHASS_STA_01</common:activity>
+			<common:description>I18N[Z_ASSCHASS_STA_01.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>STANDALONE_JSP</activity:executionType>
+			<activity:classOrProgram>%PROTOCOL%://%SERVER%:%PORT%/MEEXTDC~apps~web~atos.com/com/atos/wpmf/podplugin/aggregate/assignaggStandalone.jsf</activity:classOrProgram>
+			<activity:visible>true</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_ASSCHASS_PLUG_02</common:activity>
+			<common:description>I18N[Z_ASSCHASS_PLUG_02.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>JAVA</activity:executionType>
+			<activity:classOrProgram>com.atos.wpmf.web.podplugin.aggregate.ChassisSFCController</activity:classOrProgram>
+			<activity:visible>true</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_SERIALIZE_PLUG</common:activity>
+			<common:description>I18N[Z_SERIALIZE_PLUG.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>JAVA</activity:executionType>
+			<activity:classOrProgram>com.atos.serialization.SFCSerialization</activity:classOrProgram>
+			<activity:visible>true</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_SERIALIZE2_PLUG</common:activity>
+			<common:description>I18N[Z_SERIALIZE2_PLUG.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>JAVA</activity:executionType>
+			<activity:classOrProgram>com.atos.serialization.SFCSerializationNoLimit</activity:classOrProgram>
+			<activity:visible>true</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	
+		<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_STRTVALIDAT_PLUG</common:activity>
+			<common:description>I18N[Z_STRTVALIDAT_PLUG.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>JAVA</activity:executionType>
+			<activity:classOrProgram>com.atos.startvalidation.StartValidationPlugin</activity:classOrProgram>
+			<activity:visible>true</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_CHANGE_SFC</common:activity>
+			<common:description>I18N[Z_CHANGE_SFC.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>JAVA</activity:executionType>
+			<activity:classOrProgram>com.atos.wpmf.web.podplugin.postscanactivities.ChangeSFCAfterVINNoGeneration</activity:classOrProgram>
+			<activity:visible>true</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_ASSEMBLY</common:activity>
+			<common:description>I18N[Z_ASSEMBLY.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>JAVA</activity:executionType>
+			<activity:classOrProgram>com.atos.wpmf.web.podplugin.postscanactivities.AssemblyStatus</activity:classOrProgram>
+			<activity:visible>true</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>TOUCH_OPER_POD_VOLVO</common:activity>
+			<common:description>I18N[TOUCH_OPER_POD_VOLVO.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>STANDALONE_JSP</activity:executionType>
+			<activity:classOrProgram>%PROTOCOL%://%SERVER%:%PORT%/MEEXTDC~apps~web~atos.com/com/sap/me/wpmf/client/template.jsf?WORKSTATION=OPERATION_TOUCH_VOVO</activity:classOrProgram>
+			<activity:visible>true</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>VOLVO_CUSTOM_POD</common:activity>
+			<common:description>I18N[VOLVO_CUSTOM_POD.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>STANDALONE_JSP</activity:executionType>
+			<activity:classOrProgram>%PROTOCOL%://%SERVER%:%PORT%/MEEXTDC~apps~web~atos.com/com/sap/me/wpmf/client/template.jsf?WORKSTATION=OPERATION_DEF_1_C</activity:classOrProgram>
+			<activity:visible>true</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_ORDER_RLS_01</common:activity>
+			<common:description>I18N[Z_ORDER_RLS_01.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>STANDALONE_JSP</activity:executionType>
+			<activity:classOrProgram>%PROTOCOL%://%SERVER%:%PORT%/MEEXTDC~apps~web~atos.com/com/atos/orderboardvolvo/OrderCreateDataViewWithoutLSFTags.jsf</activity:classOrProgram>
+			<activity:visible>true</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>INTELLIGENT_POD_RDS</common:activity>
+			<common:description>I18N[INTELLIGENT_POD_RDS.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>STANDALONE_JSP</activity:executionType>
+			<activity:classOrProgram>%PROTOCOL%://%SERVER%:%PORT%/MEEXTDC~apps~web~atos.com/com/sap/me/wpmf/client/template.jsf?WORKSTATION=OPERATION_DEF_1_D</activity:classOrProgram>
+			<activity:visible>true</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_ORDER_CRT_01</common:activity>
+			<common:description>I18N[Z_ORDER_CRT_01.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>STANDALONE_JSP</activity:executionType>
+			<activity:classOrProgram>%PROTOCOL%://%SERVER%:%PORT%/MEEXTDC~apps~web~atos.com/com/atos/orderboardvolvo/OrderReleaseDataViewWothoutLsTags.jsf</activity:classOrProgram>
+			<activity:visible>true</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_ORDER_SUB_01</common:activity>
+			<common:description>I18N[Z_ORDER_SUB_01.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>STANDALONE_JSP</activity:executionType>
+			<activity:classOrProgram>%PROTOCOL%://%SERVER%:%PORT%/MEEXTDC~apps~web~atos.com/com/atos/orderboardvolvo/OrderRelease.jsf</activity:classOrProgram>
+			<activity:visible>true</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_ORDER_RLS_02</common:activity>
+			<common:description>I18N[Z_ORDER_RLS_02.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>STANDALONE_JSP</activity:executionType>
+			<activity:classOrProgram>%PROTOCOL%://%SERVER%:%PORT%/MEEXTDC~apps~web~atos.com/com/atos/orderboardvolvo/sequencing/OrderSequenceDataView.jsf</activity:classOrProgram>
+			<activity:visible>true</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_GENERICPAT_01</common:activity>
+			<common:description>I18N[Z_GENERICPAT_01.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>STANDALONE_JSP</activity:executionType>
+			<activity:classOrProgram>%PROTOCOL%://%SERVER%:%PORT%/MEEXTDC~apps~web~atos.com/com/atos/genericpattern/PatternCustomDataView.jsf</activity:classOrProgram>
+			<activity:visible>true</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_ASSEMBLY_INTELLPOD</common:activity>
+			<common:description>I18N[Z_ASSEMBLY_INTELLPOD.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>JAVA</activity:executionType>
+			<activity:classOrProgram>com.atos.wpmf.web.podplugin.intelligentpod.postscanactivities.AssemblyStatus</activity:classOrProgram>
+			<activity:visible>true</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>Z_INTTELPOD_WORK_INS</common:activity>
+			<common:description>I18N[Z_INTTELPOD_WORK_INS.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>JAVA</activity:executionType>
+			<activity:classOrProgram>com.atos.wpmf.web.podplugin.intelligentpod.LaborOnOff</activity:classOrProgram>
+			<activity:visible>true</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>PS_OPERATION_5ROW</common:activity>
+			<common:description>I18N[PS_OPERATION_5ROW.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>POD_SELECTION</activity:executionType>
+			<activity:classOrProgram>podSelectionHVPlugin</activity:classOrProgram>
+			<activity:visible>false</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>PS_OPERATION_4ROW</common:activity>
+			<common:description>I18N[PS_OPERATION_2ROW.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>POD_SELECTION</activity:executionType>
+			<activity:classOrProgram>podSelectionHVPlugin</activity:classOrProgram>
+			<activity:visible>false</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>PS_OPERATION_4ROW</common:activity>
+			<common:description>I18N[PS_OPERATION_2ROW.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>POD_SELECTION</activity:executionType>
+			<activity:classOrProgram>podSelectionHVPlugin</activity:classOrProgram>
+			<activity:visible>false</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	
+	<common:serviceInvocationRequest>
+		<moduleId>com.sap.me.activity</moduleId>
+		<serviceName>ActivityConfigurationService</serviceName>
+		<methodName>createActivity</methodName>
+		<requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="activity:ActivityConfiguration">
+			<common:activity>PS_OPER_TOUCH</common:activity>
+			<common:description>I18N[PS_OPER_TOUCH.activity.DESC]</common:description>
+			<activity:enabled>true</activity:enabled>
+			<activity:executionType>POD_SELECTION</activity:executionType>
+			<activity:classOrProgram>podSelectionHVPlugin</activity:classOrProgram>
+			<activity:visible>false</activity:visible>
+		</requests>
+	</common:serviceInvocationRequest>
+	
+</common:serviceInvocationRequests>

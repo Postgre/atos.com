@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-config SYSTEM "http://www.visiprise.com/dtd/service-config.dtd">
+<service-config moduleId="com.atos.dataload">
+  <import moduleId="com.sap.me.plant" service="ConfigDataLoaderParent"/>	
+  <service name="ExtLoaderService" parent="ConfigDataLoaderParent"/>
+</service-config>
